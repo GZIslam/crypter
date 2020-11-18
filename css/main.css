@@ -1,0 +1,49 @@
+html, body, * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.all{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+}
+
+.side{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+} 
+
+.leftSide{
+    background-color: rgb(223, 133, 117);
+}
+
+.rightSide{
+    background-color: rgb(120, 199, 120);
+}
+
+button{
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+}
+
+#code{
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+}
+
+textarea{
+    min-width: 550px;
+    min-height: 650px;
+    padding: 15px;
+}
