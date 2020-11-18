@@ -43,7 +43,7 @@ button{
 }
 
 textarea{
-    min-width: 550px;
-    min-height: 650px;
+    min-width: 60%;
+    min-height: 80%;
     padding: 15px;
 }
