@@ -2,6 +2,14 @@ const toCryptEl = document.querySelector('#toCrypt');
 const enCryptEl = document.querySelector('#enCrypt');
 const code = document.querySelector('#code');
 
+enCryptEl.addEventListener('input', function(e) {
+    toCryptEl.value = '';
+});
+
+toCryptEl.addEventListener('input', function(e) {
+    enCryptEl.value = '';
+});
+
 function crypt() {
     if(code.value == ""){
         alert('Code must be written!');
