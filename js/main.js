@@ -1,12 +1,12 @@
-const toCryptEl = document.querySelector('#toCrypt');
 const enCryptEl = document.querySelector('#enCrypt');
+const deCryptEl = document.querySelector('#deCrypt');
 const code = document.querySelector('#code');
 
 enCryptEl.addEventListener('input', function(e) {
-    toCryptEl.value = '';
+    deCryptEl.value = '';
 });
 
-toCryptEl.addEventListener('input', function(e) {
+deCryptEl.addEventListener('input', function(e) {
     enCryptEl.value = '';
 });
 
@@ -15,15 +15,15 @@ function crypt() {
         alert('Code must be written!');
         return false;
     }
-    if(toCryptEl.value !== '') {
-        enCryptEl.value = toCrypt(toCryptEl.value, code.value);
+    if(enCryptEl.value !== '') {
+        deCryptEl.value = enCrypt(enCryptEl.value, code.value);
     }
     else {
-        toCryptEl.value = enCrypt(enCryptEl.value, code.value);
+        enCryptEl.value = deCrypt(deCryptEl.value, code.value);
     }
 }
 
-function toCrypt(str, code) {
+function enCrypt(str, code) {
     let result = [];
     let str1 = Array.from(str).reverse();
     let charCodeArr = [];
@@ -44,7 +44,7 @@ function toCrypt(str, code) {
 }
 
   
-function enCrypt(str, code) {
+function deCrypt(str, code) {
     let result = [];
     let str1 = Array.from(str); // reverse
     let charCodeArr = [];
