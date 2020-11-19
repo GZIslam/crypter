@@ -21,11 +21,11 @@ html, body, * {
 } 
 
 .leftSide{
-    background-color: rgb(223, 133, 117);
+    background-color: rgb(117, 184, 223);
 }
 
 .rightSide{
-    background-color: rgb(120, 199, 120);
+    background-color: rgb(83, 103, 129);
 }
 
 button{
@@ -48,4 +48,8 @@ textarea{
     min-width: 60%;
     min-height: 80%;
     padding: 15px;
+}
+
+h1{
+    color: white;
 }
