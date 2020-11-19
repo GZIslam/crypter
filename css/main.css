@@ -62,3 +62,10 @@ textarea{
 h1{
     color: white;
 }
+
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
