@@ -40,13 +40,14 @@ button{
     top: 48%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 70px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
     padding: 10px;
+    background-color: grey;
+    border-radius: 10px;
 }
 
 #code{
