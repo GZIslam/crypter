@@ -28,6 +28,7 @@ button{
     width: 116px;
     height: 45px;
     background: #415879;
+    border: none;
 }
 
 .code{
