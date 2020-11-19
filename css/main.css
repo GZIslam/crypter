@@ -41,13 +41,14 @@ button{
     align-items: center;
     color: white;
     padding: 10px;
-    background-color: grey;
     border-radius: 10px;
 }
 
 #code{
     width: 116px;
     height: 45px;
+    margin-bottom: 7px;
+    margin-top: 7px;
 }
 
 textarea{
@@ -65,9 +66,11 @@ h1{
 
 .title{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.27);
     padding: 15px;
+    width: 60%;
+    margin-bottom: 25px;
 }
