@@ -29,10 +29,6 @@ html, body, * {
 }
 
 button{
-    position: absolute;
-    top: 52%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 70px;
     background-color: tomato;
     color: white;
@@ -50,6 +46,7 @@ button{
     justify-content: center;
     align-items: center;
     color: white;
+    padding: 10px;
 }
 
 #code{
