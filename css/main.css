@@ -25,10 +25,9 @@ body{
 } 
 
 button{
-    width: 70px;
-    background-color: tomato;
-    color: white;
-    padding: 7px;
+    width: 116px;
+    height: 45px;
+    background: #415879;
 }
 
 .code{
@@ -47,7 +46,8 @@ button{
 }
 
 #code{
-    width: 70px;
+    width: 116px;
+    height: 45px;
 }
 
 textarea{
@@ -65,7 +65,9 @@ h1{
 
 .title{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.27);
+    padding: 15px;
 }
