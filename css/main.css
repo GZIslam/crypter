@@ -39,11 +39,20 @@ button{
     padding: 7px;
 }
 
-#code{
+.code{
     position: absolute;
     top: 48%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#code{
     width: 70px;
 }
 
