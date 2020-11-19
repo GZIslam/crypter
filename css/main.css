@@ -53,6 +53,7 @@ button{
     border: none;
     border-radius: 3px;
     outline: none;
+    padding: 5px;
 }
 
 textarea{
