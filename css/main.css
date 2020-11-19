@@ -54,6 +54,7 @@ textarea{
     min-width: 60%;
     min-height: 80%;
     padding: 15px;
+    border: none;
     border-radius: 10px;
     outline: none;
 }
