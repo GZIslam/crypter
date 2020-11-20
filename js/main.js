@@ -68,3 +68,12 @@ function deCrypt(str, code) {
     return result.reverse().join('');
 }
   
+function copyEncrypt() {
+    enCryptEl.select();
+    document.execCommand("copy");
+}
+
+function copyDecrypt() {
+    deCryptEl.select();
+    document.execCommand("copy");
+}
