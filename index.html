@@ -3,61 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css?v=9">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <title>CRYPT</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="img/logo192.png">
 </head>
 <body>
-    <div class="all">
-        <div class="leftSide side">
-            <div class="title">
-                <svg width="80" height="2" viewBox="0 0 80 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <line y1="1" x2="80" y2="1" stroke="white" stroke-width="2"/>
-                </svg>
-                <h1>ENCRYPT</h1>
-                <svg width="80" height="2" viewBox="0 0 80 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <line y1="1" x2="80" y2="1" stroke="white" stroke-width="2"/>
-                </svg>
-            </div>
-            <textarea id="enCrypt"></textarea>
-            <button id="copyEncrypt" onclick="copyEncrypt()">COPY</button>
-        </div>
-        <div class="rightSide side">
-            <div class="title">
-                <svg width="80" height="2" viewBox="0 0 80 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <line y1="1" x2="80" y2="1" stroke="white" stroke-width="2"/>
-                </svg>
-                <h1>DECRYPT</h1>
-                <svg width="80" height="2" viewBox="0 0 80 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <line y1="1" x2="80" y2="1" stroke="white" stroke-width="2"/>
-                </svg>
-            </div>
-            <textarea id="deCrypt"></textarea>
-            <button id="copyDecrypt" onclick="copyDecrypt()">COPY</button>
-        </div>
-    </div>
-
-    <div class="code">
-        <h5>CODE</h5>
-        <input type="number" id="code">
-        <button onclick="crypt()">
-            <svg width="32" height="21" viewBox="0 0 32 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0)">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M31.0589 10.045C31.0589 9.87745 30.9899 9.71745 30.8751 9.59698L24.6639 3.3231C24.4186 3.07526 24.0214 3.07588 23.7767 3.3231C23.5314 3.57031 23.5314 3.97188 23.7767 4.2191L28.9174 9.41125H11.6079C11.2616 9.41125 10.9805 9.69486 10.9805 10.045C10.9805 10.3951 11.2616 10.6787 11.6079 10.6787H28.9168L23.7767 15.8709C23.5314 16.1181 23.532 16.5196 23.7767 16.7669C24.022 17.0141 24.4192 17.0141 24.6639 16.7669L30.8751 10.493C30.9924 10.3744 31.057 10.2113 31.0589 10.045Z" fill="white"/>
-                    </g>
-                    <g clip-path="url(#clip1)">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.941099 10.0334C0.941099 10.2009 1.01012 10.3609 1.12494 10.4814L7.33608 16.7553C7.58141 17.0031 7.97859 17.0025 8.2233 16.7553C8.46863 16.5081 8.46863 16.1065 8.2233 15.8593L3.08259 10.6671L20.3921 10.6671C20.7384 10.6671 21.0195 10.3835 21.0195 10.0334C21.0195 9.68327 20.7384 9.39966 20.3921 9.39966L3.08322 9.39967L8.2233 4.20751C8.46863 3.96029 8.468 3.55872 8.22329 3.31151C7.97796 3.06429 7.58078 3.06429 7.33608 3.31151L1.12494 9.58539C1.00761 9.70398 0.942981 9.86711 0.941099 10.0334Z" fill="white"/>
-                    </g>
-                    <defs>
-                    <clipPath id="clip0">
-                    <rect width="20.0784" height="20.0784" fill="white" transform="translate(10.9805)"/>
-                    </clipPath>
-                    <clipPath id="clip1">
-                    <rect width="20.0784" height="20.0784" fill="white" transform="translate(21.0195 20.0784) rotate(180)"/>
-                    </clipPath>
-                    </defs>
-            </svg>
-        </button>
+    <input class="code" type="text" id="code" placeholder="code">
+    <textarea class="text" name="" id="" cols="30" rows="10" placeholder="type your text here..."></textarea>
+    <div class="copyPaste">
+        <button class="paste" onclick="textPaste()">Paste</button>
+        <button class="copy" onclick="textCopy()">Copy</button>
+    </div>    
+    <div class="encryptDecrypt">
+        <button class="encrypt" onclick="enCrypt()">Encrypt</button>
+        <button class="decrypt" onclick="deCrypt()">Decrypt</button>
     </div>
     <script src="js/main.js"></script>
 </body>

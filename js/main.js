@@ -1,29 +1,39 @@
-const enCryptEl = document.querySelector('#enCrypt');
-const deCryptEl = document.querySelector('#deCrypt');
-const code = document.querySelector('#code');
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register('sw.js').then(registration => {
+        console.log('Sw Reg');
+        console.log(registration);
+    }).catch(error => {
+        console.error('Sw error');
+        console.log(error);
+    });
+}
 
-enCryptEl.addEventListener('input', function(e) {
-    deCryptEl.value = '';
+
+const textEl = document.querySelector('.text');
+const codeEl = document.querySelector('.code');
+
+codeEl.addEventListener('input', function(e) {
+  textEl.value = '';
 });
 
-deCryptEl.addEventListener('input', function(e) {
-    enCryptEl.value = '';
-});
-
-function crypt() {
-    if(code.value == ""){
+function enCrypt() {
+    if(codeEl.value == ""){
         alert('Code must be written!');
         return false;
     }
-    if(enCryptEl.value !== '') {
-        deCryptEl.value = enCrypt(enCryptEl.value, code.value);
-    }
-    else {
-        enCryptEl.value = deCrypt(deCryptEl.value, code.value);
-    }
+    textEl.value = enCryptText(textEl.value, codeEl.value);
 }
 
-function enCrypt(str, code) {
+function deCrypt() {
+    if(codeEl.value == ""){
+        alert('Code must be written!');
+        return false;
+    }
+    textEl.value = deCryptText(textEl.value, codeEl.value);
+}
+
+
+function enCryptText(str, code) {
     let result = [];
     let str1 = Array.from(str).reverse();
     let charCodeArr = [];
@@ -44,7 +54,7 @@ function enCrypt(str, code) {
 }
 
   
-function deCrypt(str, code) {
+function deCryptText(str, code) {
     let result = [];
     let str1 = Array.from(str); // reverse
     let charCodeArr = [];
@@ -68,12 +78,19 @@ function deCrypt(str, code) {
     return result.reverse().join('');
 }
   
-function copyEncrypt() {
-    enCryptEl.select();
+function textCopy() {
+    textEl.select();
     document.execCommand("copy");
 }
 
-function copyDecrypt() {
-    deCryptEl.select();
-    document.execCommand("copy");
+function textPaste() {
+    // textEl.select();
+    // document.execCommand("paste");
+    navigator.clipboard.readText().then(text => textEl.value = text);
 }
+
+const codeInput = document.querySelector('#code');
+
+codeInput.addEventListener('input', function(){
+  codeInput.value = codeInput.value.replace(/\D/g, "");
+});

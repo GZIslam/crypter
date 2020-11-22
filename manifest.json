@@ -1,0 +1,21 @@
+{
+    "name": "CRYPT",
+    "short_name": "CRPT",
+    "start_url": ".",
+    "background_color": "white",
+    "theme_color": "white",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "img/logo192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "img/logo512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+
+}
